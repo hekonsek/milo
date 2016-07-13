@@ -84,8 +84,9 @@ public interface UaSubscription {
      * @param itemsToCreate      a list of {@link MonitoredItemCreateRequest}s.
      * @return a list of {@link UaMonitoredItem}s.
      */
-    CompletableFuture<List<UaMonitoredItem>> createMonitoredItems(TimestampsToReturn timestampsToReturn,
-                                                                  List<MonitoredItemCreateRequest> itemsToCreate);
+    CompletableFuture<List<UaMonitoredItem>> createMonitoredItems(
+        TimestampsToReturn timestampsToReturn,
+        List<MonitoredItemCreateRequest> itemsToCreate);
 
     /**
      * Create one or more {@link UaMonitoredItem}s.
@@ -103,9 +104,10 @@ public interface UaSubscription {
      * @param itemCreationCallback callback to be invoked for each successfully created {@link UaMonitoredItem}.
      * @return a list of {@link UaMonitoredItem}s.
      */
-    CompletableFuture<List<UaMonitoredItem>> createMonitoredItems(TimestampsToReturn timestampsToReturn,
-                                                                  List<MonitoredItemCreateRequest> itemsToCreate,
-                                                                  BiConsumer<UaMonitoredItem, Integer> itemCreationCallback);
+    CompletableFuture<List<UaMonitoredItem>> createMonitoredItems(
+        TimestampsToReturn timestampsToReturn,
+        List<MonitoredItemCreateRequest> itemsToCreate,
+        BiConsumer<UaMonitoredItem, Integer> itemCreationCallback);
 
     /**
      * Modify one or more {@link UaMonitoredItem}s.
